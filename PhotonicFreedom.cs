@@ -484,7 +484,7 @@ public class PhotonicFreedom : ResoniteMod
         public static void OnCommonUpdate_Postfix(ScreenModeController __instance)
         {
             if (!_outputDeviceChanged) return;
-            Msg("Waiting for changed camera");
+            // Msg("Waiting for changed camera"); // Gets stuck for some reason and spams log..
             if (_mainCam == Camera.main || Camera.main == null) return;
             Msg("Resetting Camera");
             _mainCam = Camera.main;
